@@ -70,7 +70,18 @@ function makePayment (idRequest, qtyRequest) {
     console.log(qtyRequest)
     connection.query("SELECT * FROM products WHERE item_id =" + idRequest, function(err,res){
         if(err) throw err;
-        console.table(res);
+
+        // Retrieve the row as object
+        var itemInfo = res[0];
+        //console.log(itemInfo);
+        //console.log(itemInfo.stock_qty);
+
+        //Check if qtyRequest is surpassed inventory or not
+        if(qtyRequest > itemInfo.stock_qty){
+            console.log("Insufficient amount!")
+        } else if (qtyRequest <= stock_qty) {
+
+        }
     
     
     })
@@ -80,21 +91,7 @@ function makePayment (idRequest, qtyRequest) {
 
 
 
-//Ask users for qty 
-// function availableUnit (id){
-//     console.log(id);
-//     inquirer.prompt({
-//         name: "unit",
-//         type: "input",
-//         message: "How many units would you like to buy?"
-//     }).then(function(userInput){
-//         console.log(userInput);
-    //      connection.query("SELECT item_id, product_name, price FROM products WHERE stock_qty = ? AND ? < stock_qty", userInput.unit, function(err, res){
-    //         if(err) throw err;
-    //         console.table(res);
-       //  })
-    // })
-//}
+
 
 
 
