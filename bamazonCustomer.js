@@ -29,35 +29,55 @@ function afterConnection(){
         if(err) throw err;
         console.table(res);
     })
-    itemForSale();
+    makeAnOrder();
    
     
 }
 
 
 //Create prompt with 2 messages request: id, number of units
-// Ask users for item ID
 function makeAnOrder (){
     
     inquirer.prompt(
-        {
-            name: "id",
-            type: "input",
-            message: "What is the item's id you want to buy?"
-        },
-        {
-            name: "unit",
-            type: "input",
-            message:"How many units would you like to buy?"
-        }).then(function(userAns){
+        [
+            {
+                name: "item_ID",
+                type: "input",
+                message: "What is the item's id you want to buy?"
+            },
+
+            {
+                name: "unit",
+                type: "input",
+                message:"How many units would you like to buy?"
+            }
+        ]
+        ).then(function(userAns){
         console.log(userAns);
-            var idInput = userAns.id;
+            var idInput = userAns.item_ID;
             var unitQty = userAns.unit;
+
             makePayment (idInput, unitQty);
          })
-
-  
 }
+
+// makePayment() will check if the qty is surpass the inventory or not. 
+//Create 2 conditions:
+//If the qty surpass, return message to user.  
+//If not, return total to user, update new stock_qty, update department sale.
+
+function makePayment (idRequest, qtyRequest) {
+    console.log(qtyRequest)
+    connection.query("SELECT * FROM products WHERE item_id =" + idRequest, function(err,res){
+        if(err) throw err;
+        console.table(res);
+    
+    
+    })
+
+}
+
+
 
 
 //Ask users for qty 
@@ -77,8 +97,4 @@ function makeAnOrder (){
 //}
 
 
-function updateUnit (newunit){
-    connection.query("UPDATE products SET stock_qty = ?",  )
-}
 
-connection.end();
