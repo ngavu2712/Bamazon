@@ -25,7 +25,7 @@
 
 **bamazonManager.js**
 
-Manager is able to manage:
+Provide Manager View.
 
 1. Product for sale - Manager is able to see available items data including id, name, price and quantity.
 
@@ -35,6 +35,13 @@ Manager is able to manage:
 
 1. Add new product.
 
+**bamazonSupervisor.js**
+
+Provide Supervisor View
+
+1. View Product Sale by Department
+
+1. Create New Department
 
 # Demo Video
 
