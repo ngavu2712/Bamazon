@@ -29,9 +29,11 @@ Manager is able to manage:
 
 1. Product for sale - Manager is able to see available items data including id, name, price and quantity.
 
-1. Add to inventory - add more stock quantity to any item
+1. View low inventory - view all items with an inventory count lower than five.
 
-1. Add new product 
+1. Add to inventory - add more stock quantity to any item.
+
+1. Add new product.
 
 
 # Demo Video
