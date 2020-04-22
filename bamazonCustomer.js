@@ -15,7 +15,8 @@ var connection = mysql.createConnection( {
 connection.connect(function(err){
     if(err) throw err;
     console.log("Connected as is", connection.threadId);
-  
+    
+
 });
 afterConnection();
 
@@ -28,6 +29,8 @@ function afterConnection(){
         if(err) throw err;
         console.table(res);
     })
+    itemForSale();
+   
     
 }
 
@@ -40,27 +43,34 @@ function itemForSale (){
         type: "input",
         message: "What is the item's id you want to buy?"
     }).then(function(userInput){
-        var idDisplay = connection.query("SELECT item_id, product_name, price FROM products WHERE item_id = ?", userInput.idInput, function(err, res){
-            if(err) throw err;
-            console.table(res);
-        })
-    })
+        console.log(userInput);
+    //     connection.query("SELECT item_id, product_name, price FROM products WHERE item_id = ?", userInput.idInput, function(err, res){
+    //         if(err) throw err;
+    //         console.table(res);
+           availableUnit(userInput.idInput);
+         })
+    // })
+
+  
 }
 
-function availableUnit (){
-    
+function availableUnit (id){
+    console.log(id);
     inquirer.prompt({
         name: "unit",
         type: "input",
         message: "How many units would you like to buy?"
     }).then(function(userInput){
-        var unitDisplay = connection.query("SELECT item_id, product_name, price FROM products WHERE stock_qty = ? AND ? < stock_qty", userInput.unit, function(err, res){
-            if(err) throw err;
-            console.table(res);
-        })
-    })
+        console.log(userInput);
+    //      connection.query("SELECT item_id, product_name, price FROM products WHERE stock_qty = ? AND ? < stock_qty", userInput.unit, function(err, res){
+    //         if(err) throw err;
+    //         console.table(res);
+         })
+    // })
 }
 
-//
+function updateUnit (newunit){
+    connection.query("UPDATE products SET stock_qty = ?",  )
+}
 
 connection.end();
