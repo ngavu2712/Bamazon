@@ -15,13 +15,24 @@
 
 # Challenges
 
-bamazonCustomer.js
+**bamazonCustomer.js** 
 
-* Ask customer for item ID 
-* Ask customer for the quantity they'd like to purchase.
-  * If the demand quantity surpass the inventory stock, response to customer with message "Insufficient Quantity!"
+1. Ask customer for item ID 
+1. Ask customer for the quantity they'd like to purchase.
+  1. If the demand quantity surpass the inventory stock, response to customer with message "Insufficient Quantity!"
 
-  * If there is a sufficient amount of product in stock, it will return the total for that purchase, update stock quantity and department sale. 
+  1. If there is a sufficient amount of product in stock, it will return the total for that purchase, update stock quantity and department sale. 
+
+**bamazonManager.js**
+
+Manager is able to manage:
+
+1. Product for sale - Manager is able to see available items data including id, name, price and quantity.
+
+1. Add to inventory - add more stock quantity to any item
+
+1. Add new product 
+
 
 # Demo Video
 

@@ -1,3 +1,12 @@
+/* WHAT MANAGER CAN DO:
+
+    * List: View product for sale / View Low Inventory / Add to Inventory / Add New Product
+    
+
+*/
+
+
+
 var mysql = require ('mysql');
 var inquirer = require ('inquirer');
 require ('console.table');
