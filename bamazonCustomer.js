@@ -53,7 +53,7 @@ function makeAnOrder (){
             }
         ]
         ).then(function(userAns){
-        console.log(userAns);
+        //console.log(userAns);
             var idInput = userAns.item_ID;
             var unitQty = userAns.unit;
 
@@ -67,23 +67,24 @@ function makeAnOrder (){
 //If not, return total to user, update new stock_qty, update department sale.
 
 function makePayment (idRequest, qtyRequest) {
-    console.log(qtyRequest)
+    //console.log(qtyRequest)
     connection.query("SELECT * FROM products WHERE item_id =" + idRequest, function(err,res){
         if(err) throw err;
 
         // Retrieve the row as object
         var itemInfo = res[0];
-        //console.log(itemInfo);
+        // console.log(itemInfo);
         //console.log(itemInfo.stock_qty);
 
         //Check if qtyRequest is surpassed inventory or not
         if(qtyRequest > itemInfo.stock_qty){
             console.log("Insufficient amount!")
-        } else if (qtyRequest <= stock_qty) {
+        } 
+        else if (qtyRequest <= itemInfo.stock_qty) {
+             var total = qtyRequest * itemInfo.price;
+             console.log("Your total is $"+ total); 
+         }
 
-        }
-    
-    
     })
 
 }
