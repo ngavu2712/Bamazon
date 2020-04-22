@@ -23,3 +23,7 @@ INSERT INTO products (product_name, department_name, price, stock_qty)
            ('Road Bike', 'Outdoor Gear', 598.95, 30)
     ;
    
+DELETE FROM products WHERE item_id <= 10;
+
+/* mySQL syntax is space sensitive */
+UPDATE products SET stock_qty = 52 WHERE item_id =9; 

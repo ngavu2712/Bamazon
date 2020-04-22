@@ -30,8 +30,6 @@ function afterConnection(){
         console.table(res);
     })
     makeAnOrder();
-   
-    
 }
 
 
@@ -73,20 +71,26 @@ function makePayment (idRequest, qtyRequest) {
 
         // Retrieve the row as object
         var itemInfo = res[0];
-        // console.log(itemInfo);
+        console.log(itemInfo);
         //console.log(itemInfo.stock_qty);
 
-        //Check if qtyRequest is surpassed inventory or not
-        if(qtyRequest > itemInfo.stock_qty){
+        // Tell user "Insufficient amount" when they enter large qty
+        var stockQuan = itemInfo.stock_qty;
+        //console.log(stockQuan)
+        if(qtyRequest > stockQuan){
             console.log("Insufficient amount!")
         } 
-        else if (qtyRequest <= itemInfo.stock_qty) {
+        // Calculate total when we have enough units in inventory
+        else if (qtyRequest <= stockQuan) {
              var total = qtyRequest * itemInfo.price;
-             console.log("Your total is $"+ total); 
+             console.log("Your total is $"+ total);
+        
+        //Update stock_qty in mySQLWorkbench
+             var newInventory = parseInt(stockQuan - qtyRequest);
+             //console.log(newInventory);
+            connection.query("UPDATE products SET stock_qty =" + newInventory + " " + "WHERE item_id =" + idRequest)   
          }
-
     })
-
 }
 
 
