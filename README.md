@@ -44,4 +44,17 @@ Provide Supervisor View
 1. Create New Department
 
 # Demo Video
+
+1. Bamazom Customer
+
  ![ ](https://j.gifs.com/ZYnAMQ.gif)
+
+1. Bamazon Manager
+
+  ![ ](https://j.gifs.com/ZYnAMQ.gif)
+
+1. Bamazon Supervisor
+
+  ![ ](https://www.youtube.com/watch?v=VvN10RoJxAw&feature=youtu.be)
+
+
