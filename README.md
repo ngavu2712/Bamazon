@@ -51,10 +51,10 @@ Provide Supervisor View
 
 1. Bamazon Manager
 
-  ![ ](https://drive.google.com/file/d/1ctHWTKHkTv-CNufv0bgq-IJ3wDB1pKAO/preview)
+   https://www.youtube.com/watch?v=_2euP63mHxQ&feature=youtu.be
 
 1. Bamazon Supervisor
 
-  ![ ](https://www.youtube.com/watch?v=VvN10RoJxAw&feature=youtu.be)
+  https://www.youtube.com/watch?v=VvN10RoJxAw&feature=youtu.be
 
 
