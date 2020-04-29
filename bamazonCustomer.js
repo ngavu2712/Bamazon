@@ -56,7 +56,6 @@ function makeAnOrder (){
             var unitQty = userAns.unit;
 
             makePayment (idInput, unitQty);
-            afterConnection();
          })
 }
 
