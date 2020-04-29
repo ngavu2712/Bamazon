@@ -44,7 +44,4 @@ Provide Supervisor View
 1. Create New Department
 
 # Demo Video
-<iframe src='//gifs.com/embed/bamazon-customer-ZYnAMQ' frameborder='0' scrolling='no' width='1152px' height='720px' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>
-
-
-
+![Bamazon Customer] (https://gifs.com/gif/bamazon-customer-ZYnAMQ)
