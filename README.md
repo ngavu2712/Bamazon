@@ -51,7 +51,7 @@ Provide Supervisor View
 
 1. Bamazon Manager
 
-  ![ ](https://j.gifs.com/ZYnAMQ.gif)
+  ![ ](https://drive.google.com/file/d/1ctHWTKHkTv-CNufv0bgq-IJ3wDB1pKAO/preview)
 
 1. Bamazon Supervisor
 
