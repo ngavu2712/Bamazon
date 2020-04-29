@@ -44,4 +44,4 @@ Provide Supervisor View
 1. Create New Department
 
 # Demo Video
-![Bamazon Customer] (https://gifs.com/gif/bamazon-customer-ZYnAMQ)
+![Bamazon Customer] (https://j.gifs.com/ZYnAMQ.gif)
